@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BioInformaTony webpage</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: white; /* Change this to your desired background color */
+        }
+        .header {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            background-color: dodgerblue;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+        .nav a {
+            text-decoration: none;
+            color: white;
+            margin: 0 10px;
+        }
+        .nav a:hover {
+            text-decoration: overline;
+        }
+        .main {
+            margin-top: 70px; /* Height of the header */
+        }
+        .banner {
+            position: relative;
+            background-image: url('images/fullRoom_AI-1.png'); /* Ensure this image is in the same directory as your HTML file */
+            background-size: cover;
+            background-position: center;
+            height: 700px;
+            color: white;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            text-align: center;
+            flex-direction: column;
+        }
+        .banner h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+        .banner .description {
+            font-size: 2.0em;
+            margin: 100px 0 0 0;
+            color: white; /* Change the color here */
+        }
+        .content {
+            padding: 20px;
+            color: dodgerblue; /* Change the color here */
+        }
+        .content .main-paragraph {
+            font-size: 1.2em; /* Increase the font size here */
+            margin: 0 5cm; /* Add 2cm margin on each side */
+            color: grey; /* Change the color here */
+        }
+        .youtube-btn, .ucalgary_page-btn, .github_page-btn {
+            background-color: dodgerblue;
+            color: white;
+            padding: 10px 10px;
+            border: white;
+            cursor: pointer;
+            font-size: 1em;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+        .youtube-btn:hover, .ucalgary_page-btn:hover {
+            background-color: gray;
+        }
+        .youtube-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        .ucalgary_page-btn {
+            position: absolute;
+            top: 80px;
+            right: 20px;
+        }
+        .github_page-btn {
+            position: absolute;
+            top: 140px;
+            right: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="nav">
+            <div class="links">
+                <a href="index.html">Home</a>
+                <a href="software.html">Software</a>
+                <a href="publications.html">Publications</a> <!-- Link to publications.html -->
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a> 
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="banner">
+            <a href="https://www.youtube.com/@BioInformaTony-cn2zv/videos" class="youtube-btn" target="_blank">YouTube Channel</a>
+            <a href="https://vet.ucalgary.ca/bioinformatics/home" class="ucalgary_page-btn" target="_blank">ucalgary_page</a>
+            <a href="https://github.com/jjovelc" class="github_page-btn" target="_blank">github_page</a>
+        </div>
+        <div class="content">
+            <h2>Purpose of this page</h2>
+            <p class="main-paragraph">This is a space to share my curiosity in the realm of informatics. Nowadays, informatics has become a prominent field due to the generation of large datasets that require sophisticated and powerful algorithms for their analysis. Bioinformatics is a subfield of informatics that focuses on the analysis of biological data, such as DNA sequences, protein structures, and gene expression profiles.
+            My goal is to provide a platform where I can share my knowledge and experience in the field of bioinformatics. I will be sharing my thoughts on the latest trends in the field, as well as my own research and projects. I hope that this page will be a valuable resource for anyone interested in bioinformatics and informatics in general. 
+            <br><br>
+
+            Bioinformatics is a rapidly evolving field that is revolutionizing the way we understand and analyze biological data. It combines the power of computer science, statistics, and biology to develop tools and algorithms for the analysis of biological data. Bioinformatics has a wide range of applications, from understanding the genetic basis of diseases to designing new drugs and therapies. By sharing my knowledge and experience in bioinformatics, I hope to inspire others to explore this exciting field and contribute to the advancement of science and medicine. 
+            <br><br>
+            Milestone achievements in bioinformatics include the Human Genome Project, which mapped the entire human genome, and the development of next-generation sequencing technologies, which have revolutionized the field of genomics. These advances have paved the way for personalized medicine, where treatments are tailored to an individual's genetic makeup. Bioinformatics is also playing a key role in the fight against infectious diseases, such as COVID-19, by enabling the rapid analysis of viral genomes and the development of diagnostic tests and vaccines. 
+            <br><br>
+            On the Ecology and Evolutionary Biology side, bioinformatics is used to study the diversity and evolution of species, as well as their interactions with the environment. By analyzing DNA sequences and other biological data, researchers can reconstruct the evolutionary history of species, identify genes that are important for adaptation and speciation, and understand how ecosystems are changing over time. Bioinformatics is also used to study the impact of human activities on the environment, such as deforestation, pollution, and climate change. 
+            By combining field observations with computational analyses, researchers can develop strategies for conserving biodiversity and mitigating the effects of environmental change.
+            <br><br>
+            </p>
+        </div>
+    </div>
+
+
+</body>
+</html>

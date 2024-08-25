@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: white; /* Change this to your desired background color */
+        }
+        
+        .header {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            background-color: dodgerblue;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+        .nav a {
+            text-decoration: none;
+            color: white;
+            margin: 0 10px;
+        }
+        .nav a:hover {
+            text-decoration: overline;
+        }
+        .main {
+            margin-top: 60px; /* Height of the header */
+        }
+        .content {
+            padding: 20px;
+            color: dodgerblue; /* Change the color here */
+        }
+        .content .main-paragraph {
+            font-size: 1.2em; /* Increase the font size here */
+            margin: 0 5cm; /* Add 2cm margin on each side */
+            color: grey; /* Change the color here */
+        }
+        .publications {
+            padding: 20px;
+            margin: 20px 5cm;
+            color: grey;
+        }
+        .publication {
+            margin-bottom: 10px;
+        }
+        .file-management {
+            margin: 20px 5cm;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .file-item {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="nav">
+            <div class="links">
+                <a href="index.html">Home</a> <!-- Link to index.html -->
+                <a href="software.html">Software</a> <!-- Link to software.html -->
+                <a href="publications.html">Publications</a> <!-- Link to publications.html -->
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a> 
+            </div>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="content">
+            <p class="main-paragraph">
+                <!-- Your content here -->
+            </p>
+        </div>
+
+        <div class="file-management">
+            <h2>Software</h2>
+            
+            <h3 style="color: firebrick;">Perl</h3>
+            <div id="perl-files" class="file-list">
+                <!-- Perl files will be listed here -->
+            </div>
+            
+            <h3 style="color: firebrick;">R</h3>
+            <div id="r-files" class="file-list">
+                <!-- R files will be listed here -->
+            </div>
+            
+            <h3 style="color: firebrick;">Python</h3>
+            <div id="python-files" class="file-list">
+                <!-- Python files will be listed here -->
+            </div>
+            
+            <h3 style="color: firebrick;">Bash</h3>
+            <div id="bash-files" class="file-list">
+                <!-- Bash files will be listed here -->
+            </div>
+
+            <input type="file" id="file-input" multiple>
+            <button onclick="uploadFiles()">Upload Files</button>
+        </div>
+    </div>
+
+    <script>
+        // Example file lists for different languages
+        const files = {
+            perl: [
+                { name: 'crop_columns.pl', url: './scripts/crop_columns.pl' }
+            ],
+            r: [
+                { name: 'compare_log2FC.R', url: './scripts/compare_log2FC.R' }
+            ],
+            python: [
+                { name: 'convert_tsv2xlsx.py', url: './scripts/convert_tsv2xlsx.py' }
+            ],
+            bash: [
+                { name: 'transpose.sh', url: './scripts/transpose.sh' }
+            ]
+        };
+
+        function displayFiles() {
+            // Display Perl files
+            const perlList = document.getElementById('perl-files');
+            perlList.innerHTML = '';
+            files.perl.forEach(file => {
+                const fileItem = document.createElement('div');
+                fileItem.className = 'file-item';
+                fileItem.innerHTML = `<a href="${file.url}">${file.name}</a>`;
+                perlList.appendChild(fileItem);
+            });
+
+            // Display R files
+            const rList = document.getElementById('r-files');
+            rList.innerHTML = '';
+            files.r.forEach(file => {
+                const fileItem = document.createElement('div');
+                fileItem.className = 'file-item';
+                fileItem.innerHTML = `<a href="${file.url}">${file.name}</a>`;
+                rList.appendChild(fileItem);
+            });
+
+            // Display Python files
+            const pythonList = document.getElementById('python-files');
+            pythonList.innerHTML = '';
+            files.python.forEach(file => {
+                const fileItem = document.createElement('div');
+                fileItem.className = 'file-item';
+                fileItem.innerHTML = `<a href="${file.url}">${file.name}</a>`;
+                pythonList.appendChild(fileItem);
+            });
+
+            // Display Bash files
+            const bashList = document.getElementById('bash-files');
+            bashList.innerHTML = '';
+            files.bash.forEach(file => {
+                const fileItem = document.createElement('div');
+                fileItem.className = 'file-item';
+                fileItem.innerHTML = `<a href="${file.url}">${file.name}</a>`;
+                bashList.appendChild(fileItem);
+            });
+        }
+
+        function uploadFiles() {
+            const input = document.getElementById('file-input');
+            const fileList = document.getElementById('file-list');
+            for (const file of input.files) {
+                const fileItem = document.createElement('div');
+                fileItem.className = 'file-item';
+                fileItem.textContent = file.name;
+                fileList.appendChild(fileItem);
+            }
+            input.value = '';
+        }
+
+        // Initial display of files
+        displayFiles();
+    </script>
+
+</body>
+</html>
