@@ -88,6 +88,7 @@
 
         <div class="file-management">
             <h2>Software</h2>
+            <h4>Click on any script file name to download</h4>
             
             <h3 style="color: firebrick;">Perl</h3>
             <div id="perl-files" class="file-list">
@@ -109,8 +110,7 @@
                 <!-- Bash files will be listed here -->
             </div>
 
-            <input type="file" id="file-input" multiple>
-            <button onclick="uploadFiles()">Upload Files</button>
+          
         </div>
     </div>
 
@@ -173,18 +173,7 @@
             });
         }
 
-        function uploadFiles() {
-            const input = document.getElementById('file-input');
-            const fileList = document.getElementById('file-list');
-            for (const file of input.files) {
-                const fileItem = document.createElement('div');
-                fileItem.className = 'file-item';
-                fileItem.textContent = file.name;
-                fileList.appendChild(fileItem);
-            }
-            input.value = '';
-        }
-
+    
         // Initial display of files
         displayFiles();
     </script>
