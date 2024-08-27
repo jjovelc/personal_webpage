@@ -95,6 +95,68 @@
             top: 140px;
             right: 20px;
         }
+
+        .mouse_scroll {
+            display: block;
+            margin: 0 auto;
+            width: 20px;
+            height: 75px;
+            margin-top: 50px; /* Adjust margin as necessary */
+            position: absolute;
+            bottom: 20px; /* Position at the bottom of the banner */
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        
+
+        @keyframes scroll {
+            0% {
+                opacity: 1;
+                top: 3px;
+            }
+            100% {
+                opacity: 0;
+                top: 9px;
+            }
+        }
+
+        .m_scroll_arrows {
+            display: block;
+            width: 20px;
+            height: 20px;
+            border-right: 4px solid white;
+            border-bottom: 4px solid white;
+            margin: 0.125px auto;
+            transform: rotate(45deg);
+            animation: move 1.5s infinite;
+        }
+
+        .unu {
+            animation-delay: 0s;
+        }
+
+        .doi {
+            animation-delay: 0.15s;
+        }
+
+        .trei {
+            animation-delay: 0.3s;
+        }
+
+        @keyframes move {
+            0% {
+                opacity: 0;
+                transform: rotate(45deg) translate(0, 0);
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+                transform: rotate(45deg) translate(0, 8px);
+            }
+        }
     </style>
 </head>
 <body>
@@ -104,10 +166,9 @@
             <div class="links">
                 <a href="index.html">Home</a>
                 <a href="software.html">Software</a>
-                <a href="publications.html">Publications</a> <!-- Link to publications.html -->
+                <a href="publications.html">Publications</a>
                 <a href="blog.html">Blog</a>
                 <a href="contact.html">Contact</a> 
-                
             </div>
         </div>
     </div>
@@ -117,13 +178,24 @@
             <a href="https://www.youtube.com/@BioInformaTony-cn2zv/videos" class="youtube-btn" target="_blank">YouTube channel</a>
             <a href="https://vet.ucalgary.ca/bioinformatics/home" class="ucalgary_page-btn" target="_blank">ucalgary page</a>
             <a href="https://github.com/jjovelc" class="github_page-btn" target="_blank">github page</a>
+
+            <!-- Add the scroll arrow HTML here -->
+            <div class="mouse_scroll">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+                <div>
+                    <span class="m_scroll_arrows unu"></span>
+                    <span class="m_scroll_arrows doi"></span>
+                    <span class="m_scroll_arrows trei"></span>
+                </div>
+            </div>
         </div>
         <div class="content">
             <h2>Purpose of this page</h2>
             <p class="main-paragraph">This is a space to share my curiosity in the realm of informatics. Nowadays, informatics has become a prominent field due to the generation of large datasets that require sophisticated and powerful algorithms for their analysis. Bioinformatics is a subfield of informatics that focuses on the analysis of biological data, such as DNA sequences, protein structures, and gene expression profiles.
             My goal is to provide a platform where I can share my knowledge and experience in the field of bioinformatics. I will be sharing my thoughts on the latest trends in the field, as well as my own research and projects. I hope that this page will be a valuable resource for anyone interested in bioinformatics and informatics in general. 
             <br><br>
-
             Bioinformatics is a rapidly evolving field that is revolutionizing the way we understand and analyze biological data. It combines the power of computer science, statistics, and biology to develop tools and algorithms for the analysis of biological data. Bioinformatics has a wide range of applications, from understanding the genetic basis of diseases to designing new drugs and therapies. By sharing my knowledge and experience in bioinformatics, I hope to inspire others to explore this exciting field and contribute to the advancement of science and medicine. 
             <br><br>
             Milestone achievements in bioinformatics include the Human Genome Project, which mapped the entire human genome, and the development of next-generation sequencing technologies, which have revolutionized the field of genomics. These advances have paved the way for personalized medicine, where treatments are tailored to an individual's genetic makeup. Bioinformatics is also playing a key role in the fight against infectious diseases, such as COVID-19, by enabling the rapid analysis of viral genomes and the development of diagnostic tests and vaccines. 
