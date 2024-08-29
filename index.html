@@ -67,35 +67,91 @@
             margin: 0 5cm; /* Add 2cm margin on each side */
             color: grey; /* Change the color here */
         }
-        .youtube-btn, .ucalgary_page-btn, .github_page-btn {
-            background-color: red;
-            color: white;
-            padding: 10px 10px;
-            border: white;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1em;
+        .youtube-btn {
+            position: absolute;
+            top: 20px; 
+            right: 20px;
+            display: inline-flex;
+            align-items: center;
             text-decoration: none;
-            margin-top: 10px;
+            background-color: #464444;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 15px;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
         }
-        .youtube-btn:hover, .ucalgary_page-btn:hover {
-            background-color: gray;
+        .youtube-btn:hover, .ucvm_page-btn:hover {
+            background-color: white;
+            color: black;
         }
         .youtube-btn {
             position: absolute;
             top: 20px;
             right: 20px;
         }
-        .ucalgary_page-btn {
-            position: absolute;
-            top: 80px;
-            right: 20px;
+        .youtube-logo {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
         }
-        .github_page-btn {
+
+        .github-button {
             position: absolute;
-            top: 140px;
+            top: 80px; 
             right: 20px;
+            display: inline-flex;
+            align-items: center;
+            text-decoration: none;
+            background-color: #464444;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 15px;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
         }
+
+        .github-button:hover {
+            background-color: white;
+            color: black;
+        }
+
+        .github-logo {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+        }
+
+
+        .ucvm_page-btn {
+            position: absolute;
+            top: 140px; 
+            right: 20px;
+            display: inline-flex;
+            align-items: center;
+            text-decoration: none;
+            background-color: #464444;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 15px;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        .ucvm_page-btn:hover, .ucvm_page-btn:hover {
+            background-color: white;
+            color: black;
+        }
+
+        .ucvm_page-logo {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+        }
+
+        
 
         .mouse_scroll {
             display: block;
@@ -158,6 +214,9 @@
                 transform: rotate(45deg) translate(0, 8px);
             }
         }
+
+        
+
     </style>
 </head>
 <body>
@@ -174,12 +233,28 @@
         </div>
     </div>
 
+    
+
     <div class="main">
         <div class="banner">
-            <a href="https://www.youtube.com/@BioInformaTony-cn2zv/videos" class="youtube-btn" target="_blank">YouTube channel</a>
-            <a href="https://vet.ucalgary.ca/bioinformatics/home" class="ucalgary_page-btn" target="_blank">ucalgary page</a>
-            <a href="https://github.com/jjovelc" class="github_page-btn" target="_blank">github page</a>
+            
+            <a href="https://www.youtube.com/@BioInformaTony-cn2zv/videos" class="youtube-btn" target="_blank">
+                <img src="images/Youtube_logo.png" alt="Youtube" class="youtube-logo">
+                YouTube channel
+            </a>
+            
+            <a href="https://github.com/jjovelc" class="github-button" target="_blank">
+                <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Logo" class="github-logo">
+                Github page
+            </a>
 
+            <a href="https://vet.ucvm.ca/bioinformatics/home" class="ucvm_page-btn" target="_blank">
+                <img src="images/UCVM_logo.jpg" alt="UCVM Logo" class="ucvm_page-logo">
+                UCVM page
+            </a>
+
+           
+            
             <!-- Add the scroll arrow HTML here -->
             <div class="mouse_scroll">
                 <div class="mouse">
