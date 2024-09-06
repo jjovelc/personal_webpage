@@ -42,12 +42,8 @@ body, html {
   text-align: center;
   flex-direction: column;
 }
-.banner h1 {
-  margin-top: 10px;
-  font-size: 3em;
-  margin: 0;
-}
-.banner .description {
+
+.description {
   font-size: 2.0em;
   margin: 100px 0 0 0;
   color: white; /* Change the color here */
@@ -385,4 +381,36 @@ button:hover {
 }
 .file-item {
   margin-bottom: 10px;
+}
+
+/* Blogs classes */
+.blog-thumbnail{
+  width: 300px;
+  display: block;
+}
+
+.blog-title{
+  text-align: left;
+  margin-left: 10px;
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 20px;
+  margin-bottom: 12px;
+}
+
+/* Blog replicates classes */
+.banner-replicates {
+  position: relative;
+  background-image: url('../images/replicates.png'); /* Ensure this image is in the correct directory */
+  background-size: contain; /* Adjust this as necessary */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  background-position: center; /* Center the image */
+  height: 200px; /* Adjust the height as needed */
+  width: 100%; /* Set the width to 100% */
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
 }
