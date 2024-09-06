@@ -63,6 +63,13 @@ body, html {
   margin: 0 5cm; /* Add 2cm margin on each side */
   color: black; /* Change the color here */
 }
+.contact-format {
+  margin-top: 10px;
+  font-size: 1.2em; /* Increase the font size here */
+  margin: 0 5cm; 
+  color: white;
+}
+
 .youtube-btn {
   position: absolute;
   top: 20px; 
