@@ -43,6 +43,7 @@ body, html {
   flex-direction: column;
 }
 .banner h1 {
+  margin-top: 10px;
   font-size: 3em;
   margin: 0;
 }
@@ -52,13 +53,15 @@ body, html {
   color: white; /* Change the color here */
 }
 .content {
+  margin-top: 10px;
   padding: 20px;
   color: #081f44; /* Change the color here */
 }
-.content .main-paragraph {
+.main-paragraph {
+  margin-top: 10px;
   font-size: 1.2em; /* Increase the font size here */
   margin: 0 5cm; /* Add 2cm margin on each side */
-  color: white; /* Change the color here */
+  color: black; /* Change the color here */
 }
 .youtube-btn {
   position: absolute;
@@ -354,4 +357,25 @@ button:hover {
   to {
       transform: translateY(-2000px);
   }
+}
+
+/* styles (classes) for the publications tab */
+.publications {
+  padding: 20px;
+  margin: 20px 5cm;
+  color: grey;
+}
+.publication {
+  margin-bottom: 10px;
+}
+
+/* Classes for the software tab */
+.file-management {
+  margin: 20px 5cm;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+.file-item {
+  margin-bottom: 10px;
 }
