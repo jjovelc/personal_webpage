@@ -1,0 +1,225 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: white; /* Change this to your desired background color */
+}
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background-color: #081f44;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+.nav a {
+  text-decoration: none;
+  color: white;
+  margin: 0 10px;
+}
+.nav a:hover {
+  text-decoration: overline;
+}
+.main {
+  margin-top: 70px;
+}
+.banner {
+  position: relative;
+  background-image: url('../images/banner_2_man.png'); 
+  background-size: cover;
+  background-position: center;
+  height: 700px;
+  color: white;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+.banner h1 {
+  font-size: 3em;
+  margin: 0;
+}
+.banner .description {
+  font-size: 2.0em;
+  margin: 100px 0 0 0;
+  color: white; /* Change the color here */
+}
+.content {
+  padding: 20px;
+  color: #081f44; /* Change the color here */
+}
+.content .main-paragraph {
+  font-size: 1.2em; /* Increase the font size here */
+  margin: 0 5cm; /* Add 2cm margin on each side */
+  color: grey; /* Change the color here */
+}
+.youtube-btn {
+  position: absolute;
+  top: 20px; 
+  right: 20px;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  background-color: #464444;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 15px;
+  border-color: red;
+  border-style:double;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+.youtube-btn:hover, .ucvm_page-btn:hover {
+  background-color: white;
+  color: black;
+  border-color: red;
+  border-bottom-width: 5px;
+  border-style:double;
+}
+.youtube-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.youtube-logo {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.github-button {
+  position: absolute;
+  top: 80px; 
+  right: 20px;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  background-color: #464444;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 15px;
+  border-color: red;
+  border-style:double;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.github-button:hover {
+  background-color: white;
+  color: black;
+  border-color: red;
+  border-style:double;
+  border-bottom-width: 5px;
+}
+
+.github-logo {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+
+.ucvm_page-btn {
+  position: absolute;
+  top: 140px; 
+  right: 20px;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  background-color: #464444;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 15px;
+  border-color: red;
+  border-style:double;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+.ucvm_page-btn:hover {
+  background-color: white;
+  color: black;
+  border-color: red;
+  border-style:double;
+  border-bottom-width: 5px;
+}
+
+.ucvm_page-logo {
+  width: 24px;
+  height: 24px;
+
+  margin-right: 10px;
+}
+
+
+
+.mouse_scroll {
+  display: block;
+  margin: 0 auto;
+  width: 20px;
+  height: 75px;
+  margin-top: 50px; /* Adjust margin as necessary */
+  position: absolute;
+  bottom: 20px; /* Position at the bottom of the banner */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+
+@keyframes scroll {
+  0% {
+      opacity: 1;
+      top: 3px;
+  }
+  100% {
+      opacity: 0;
+      top: 9px;
+  }
+}
+
+.m_scroll_arrows {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-right: 4px solid white;
+  border-bottom: 4px solid white;
+  margin: 0.125px auto;
+  transform: rotate(45deg);
+  animation: move 1.5s infinite;
+}
+
+.unu {
+  animation-delay: 0s;
+}
+
+.doi {
+  animation-delay: 0.15s;
+}
+
+.trei {
+  animation-delay: 0.3s;
+}
+
+@keyframes move {
+  0% {
+      opacity: 0;
+      transform: rotate(45deg) translate(0, 0);
+  }
+  50% {
+      opacity: 1;
+  }
+  100% {
+      opacity: 0;
+      transform: rotate(45deg) translate(0, 8px);
+  }
+}
