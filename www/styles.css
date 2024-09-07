@@ -54,9 +54,9 @@ body, html {
   color: #081f44; /* Change the color here */
 }
 .main-paragraph {
+  text-align: left;
   margin-top: 10px;
-  font-size: 1.2em; /* Increase the font size here */
-  margin: 0 5cm; /* Add 2cm margin on each side */
+  font-size: 20px; /* Increase the font size here */
   color: black; /* Change the color here */
 }
 .contact-format {
@@ -438,7 +438,7 @@ button:hover {
 
 /* Add a background color to the active button (accordion) */
 .software-accordion:hover {
-  background-color: dodgerblue;
+  background-color: rgb(215, 17, 123);
 }
 
 /* Style the accordion panel to be hidden by default */
