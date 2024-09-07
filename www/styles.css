@@ -166,20 +166,17 @@ body, html {
   margin-right: 10px;
 }
 
-
-
 .mouse_scroll {
   display: block;
   margin: 0 auto;
   width: 20px;
   height: 75px;
-  margin-top: 50px; /* Adjust margin as necessary */
+  margin-top: 50px;
   position: absolute;
-  bottom: 20px; /* Position at the bottom of the banner */
+  bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
 }
-
 
 
 @keyframes scroll {
@@ -235,7 +232,6 @@ body, html {
   margin-bottom: 1em; /* Adjust the value as needed */
 }
 
-/* Contact Form Styles */
 .container {
   background-color: white;
   border-radius: 8px;
@@ -413,4 +409,65 @@ button:hover {
   justify-content: center;
   text-align: center;
   flex-direction: column;
+}
+
+/* Classes for software tab */
+/* Style the accordion */
+.software-grid{
+  /* Create a two-column grid layout */
+  display: grid;
+  grid-template-columns: 300px 300px; /* Two equal columns */
+  gap: 20px; /* Add space between columns */
+  padding-left: 20px;
+  
+}
+.software-accordion {
+  background-color: rgb(30, 118, 186);
+  color: #fbfafa;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 20px;
+  transition: 0.4s;
+  border: 1px solid black;
+  margin-bottom: 5px;
+}
+
+/* Add a background color to the active button (accordion) */
+.software-accordion:hover {
+  background-color: dodgerblue;
+}
+
+/* Style the accordion panel to be hidden by default */
+.sotfware-accordion-panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  border-left: 1px solid #ccc; /* Left border for the panel */
+  border-right: 1px solid #ccc; /* Right border for the panel */
+  border-bottom: 1px solid #ccc; /* Bottom border for the panel */
+  margin-bottom: 10px; /* Optional: Adds space below each expanded panel */
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  padding: 5px 0;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #0066cc;
+}
+
+ul li a:hover {
+  text-decoration: underline;
 }

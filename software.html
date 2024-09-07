@@ -28,98 +28,58 @@
                 
             </p>
         </div>
-
-        <div class="file-management">
-            <h2>Software</h2>
-            <h4>Click on any script file name to download</h4>
-            
-            <h3 style="color: firebrick;">Perl</h3>
-            <div id="perl-files" class="file-list">
-                <!-- Perl files will be listed here -->
-            </div>
-            
-            <h3 style="color: firebrick;">R</h3>
-            <div id="r-files" class="file-list">
-                <!-- R files will be listed here -->
-            </div>
-            
-            <h3 style="color: firebrick;">Python</h3>
-            <div id="python-files" class="file-list">
-                <!-- Python files will be listed here -->
-            </div>
-            
-            <h3 style="color: firebrick;">Bash</h3>
-            <div id="bash-files" class="file-list">
-                <!-- Bash files will be listed here -->
+    <div class="software-grid">
+        <!--Rows that will appear in the first column-->
+        <div>
+            <button class="software-accordion">Python Scripts</button>
+            <div class="sotfware-accordion-panel">
+            <ul>
+                <li><a href="scripts/python/convert_tsv2xlsx.py">Convert tsv to xlsx</a></li>
+            </ul>
             </div>
 
-          
+            <button class="software-accordion">R Scripts</button>
+            <div class="sotfware-accordion-panel">
+            <ul>
+                <li><a href="scripts/R/compare_log2FC.R">Compare log2FC</a></li>
+            </ul>
+            </div>
+        </div>
+
+        <!--Rows that will appear in the first column-->
+        <div>
+            <button class="software-accordion">Bash Scripts</button>
+            <div class="sotfware-accordion-panel">
+            <ul>
+                <li><a href="scripts/bash/transpose.sh">Transpose table</a></li>
+            </ul>
+            </div>
+
+            <button class="software-accordion">Perl Scripts</button>
+            <div class="sotfware-accordion-panel">
+            <ul>
+                <li><a href="scripts/perl/crop_columns.pl">Crop columns from table</a></li>
+            </ul>
+            </div>
         </div>
     </div>
 
     <script>
-        // Example file lists for different languages
-        const files = {
-            perl: [
-                { name: 'crop_columns.pl', url: './scripts/crop_columns.pl' }
-            ],
-            r: [
-                { name: 'compare_log2FC.R', url: './scripts/compare_log2FC.R' }
-            ],
-            python: [
-                { name: 'convert_tsv2xlsx.py', url: './scripts/convert_tsv2xlsx.py' }
-            ],
-            bash: [
-                { name: 'transpose.sh', url: './scripts/transpose.sh' }
-            ]
-        };
+    // JavaScript for accordion functionality
+    var acc = document.getElementsByClassName("software-accordion");
+    var i;
 
-        function displayFiles() {
-            // Display Perl files
-            const perlList = document.getElementById('perl-files');
-            perlList.innerHTML = '';
-            files.perl.forEach(file => {
-                const fileItem = document.createElement('div');
-                fileItem.className = 'file-item';
-                fileItem.innerHTML = `<a href="${file.url}">${file.name}</a>`;
-                perlList.appendChild(fileItem);
-            });
-
-            // Display R files
-            const rList = document.getElementById('r-files');
-            rList.innerHTML = '';
-            files.r.forEach(file => {
-                const fileItem = document.createElement('div');
-                fileItem.className = 'file-item';
-                fileItem.innerHTML = `<a href="${file.url}">${file.name}</a>`;
-                rList.appendChild(fileItem);
-            });
-
-            // Display Python files
-            const pythonList = document.getElementById('python-files');
-            pythonList.innerHTML = '';
-            files.python.forEach(file => {
-                const fileItem = document.createElement('div');
-                fileItem.className = 'file-item';
-                fileItem.innerHTML = `<a href="${file.url}">${file.name}</a>`;
-                pythonList.appendChild(fileItem);
-            });
-
-            // Display Bash files
-            const bashList = document.getElementById('bash-files');
-            bashList.innerHTML = '';
-            files.bash.forEach(file => {
-                const fileItem = document.createElement('div');
-                fileItem.className = 'file-item';
-                fileItem.innerHTML = `<a href="${file.url}">${file.name}</a>`;
-                bashList.appendChild(fileItem);
-            });
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+        this.classList.toggle("sotfware-accordion-active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+        } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
         }
-
-    
-        // Initial display of files
-        displayFiles();
+        });
+    }
     </script>
-
 </body>
 </html>
