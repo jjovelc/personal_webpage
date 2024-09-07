@@ -438,7 +438,7 @@ button:hover {
 
 /* Add a background color to the active button (accordion) */
 .software-accordion:hover {
-  background-color: rgb(215, 17, 123);
+  background-color: rgb(151, 149, 150);
 }
 
 /* Style the accordion panel to be hidden by default */
