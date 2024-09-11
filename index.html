@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="www/styles.css">
     <title>Juan Jovel's webpage</title>
-    
 </head>
 <body>
 
@@ -22,30 +21,25 @@
         </div>
     </div>
 
-    
-
     <div class="main">
         <div class="banner">
-            
             <a href="https://www.youtube.com/@BioInformaTony-cn2zv/videos" class="youtube-btn" target="_blank">
                 <img src="images/Youtube_logo.png" alt="Youtube" class="youtube-logo">
                 YouTube channel
             </a>
-            
+
             <a href="https://github.com/jjovelc" class="github-button" target="_blank">
                 <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Logo" class="github-logo">
                 Github page
             </a>
-            
+
             <a href="https://vet.ucalgary.ca/bioinformatics/home" class="ucvm_page-btn" target="_blank">
                 <img src="images/UCVM_logo.jpg" alt="UCVM Logo" class="ucvm_page-logo">
                 UCVM page
             </a>
 
-           
-            
-            <!-- Add the scroll arrow HTML here -->
-            <div class="mouse_scroll">
+            <!-- Scroll down arrow -->
+            <div class="mouse_scroll" onclick="scrollToGrid()">
                 <div class="mouse">
                     <div class="wheel"></div>
                 </div>
@@ -56,9 +50,37 @@
                 </div>
             </div>
         </div>
-        
+
+ <!-- Grid Section -->
+<div id="grid-section" class="grid-container">
+    <div class="grid-item">
+        <a href="https://journals.asm.org/doi/10.1128/spectrum.00532-24?url_ver=Z39.88-2003&rfr_id=ori:rid:crossref.org&rfr_dat=cr_pub%20%200pubmed" class="grid-item">
+            <div class="thumbnail">
+                <img src="images/pmrB_paper.png" alt="PmrB substitutions">
+            </div>
+            <div class="thumbnail-title">
+                <h5 style="text-align: center;">PmrB substitutions associated with E. coli phylogeny</h5>
+            </div>
+        </a>
     </div>
+    
+    <div class="grid-item">
+        <a href="https://dayhoff.ai/" class="grid-item">
+            <div class="thumbnail">
+                <img src="images/dayhoff.png" alt="Dayhoff Technologies">
+            </div>
+            <div class="thumbnail-title">
+                <h5 style="text-align: center;">Seamless solutions for your Bioinformatics needs</h5>
+            </div>
+        </a>
+    </div>
+</div>
 
 
+    <script>
+        function scrollToGrid() {
+            document.getElementById("grid-section").scrollIntoView({ behavior: "smooth" });
+        }
+    </script>
 </body>
 </html>

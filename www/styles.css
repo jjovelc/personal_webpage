@@ -4,6 +4,7 @@ body, html {
   font-family: Arial, sans-serif;
   background-color: white; /* Change this to your desired background color */
 }
+
 .header {
   position: fixed;
   width: 100%;
@@ -12,23 +13,28 @@ body, html {
   z-index: 1000;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
+
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
 }
+
 .nav a {
   text-decoration: none;
   color: white;
   margin: 0 10px;
 }
+
 .nav a:hover {
   text-decoration: overline;
 }
+
 .main {
   margin-top: 70px;
 }
+
 .banner {
   position: relative;
   background-image: url('../images/banner_2_man.png'); 
@@ -48,17 +54,20 @@ body, html {
   margin: 100px 0 0 0;
   color: white; /* Change the color here */
 }
+
 .content {
   margin-top: 10px;
   padding: 20px;
   color: #081f44; /* Change the color here */
 }
+
 .main-paragraph {
   text-align: left;
   margin-top: 10px;
   font-size: 20px; /* Increase the font size here */
   color: black; /* Change the color here */
 }
+
 .contact-format {
   margin-top: 10px;
   font-size: 1.2em; /* Increase the font size here */
@@ -83,6 +92,7 @@ body, html {
   font-size: 16px;
   transition: background-color 0.3s ease;
 }
+
 .youtube-btn:hover, .ucvm_page-btn:hover {
   background-color: white;
   color: black;
@@ -90,11 +100,13 @@ body, html {
   border-bottom-width: 5px;
   border-style:double;
 }
+
 .youtube-btn {
   position: absolute;
   top: 20px;
   right: 20px;
 }
+
 .youtube-logo {
   width: 24px;
   height: 24px;
@@ -151,6 +163,7 @@ body, html {
   font-size: 16px;
   transition: background-color 0.3s ease;
 }
+
 .ucvm_page-btn:hover {
   background-color: white;
   color: black;
@@ -227,6 +240,94 @@ body, html {
   }
 }
 
+/* Style for grid in the main page */
+/* Grid styles */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Ensure enough space */
+  gap: 20px; /* Space between items */
+  margin-top: 50px; /* Add top margin if the scroll arrow is pushing content down */
+  margin-left: 10px;
+}
+
+.grid-item {
+  background-color: #f0f0f0;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  border: 1px solid #ccc;
+}
+
+.thumbnail img {
+  width: 100%; /* Makes the thumbnail fill the grid item width */
+  height: auto;
+  max-width: 150px; /* Control the max size of the image */
+  border-radius: 8px; /* Optional styling */
+}
+
+.thumbnail-title h3 {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+
+/* Scroll Arrow styles */
+.mouse_scroll {
+  cursor: pointer;
+  text-align: center;
+  margin-top: 20px;
+  position: absolute; /* This keeps it from affecting other layout elements */
+  bottom: 20px; /* Adjust based on your design */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999; /* Make sure it's on top */
+}
+
+.mouse {
+  width: 25px;
+  height: 45px;
+  border-radius: 15px;
+  border: 2px solid #fff; /* Keep the mouse border white */
+  margin: 0 auto;
+  position: relative;
+}
+
+.wheel {
+  width: 5px;
+  height: 10px;
+  background-color: #fff; /* Wheel white */
+  border-radius: 2px;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.m_scroll_arrows {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border: solid #fff; /* Arrows white */
+  border-width: 0 2px 2px 0;
+  margin: 2px auto;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%); /* Center the arrows horizontally */
+}
+.unu {
+  transform: rotate(45deg);
+}
+
+.doi {
+  transform: rotate(45deg);
+}
+
+.trei {
+  transform: rotate(45deg);
+}
+
 /* Classes for the contact tab */
 .spacer {
   margin-bottom: 1em; /* Adjust the value as needed */
@@ -246,41 +347,6 @@ h3 {
   color: #F1C40F;
   margin: 0 0 20px 0;
   text-align: center;
-}
-
-label {
-  margin-bottom: 0.5rem;
-  color: #34495e;
-}
-
-input, textarea {
-  margin-bottom: 1rem;
-  padding: 0.5rem;
-  border: 1px solid #bdc3c7;
-  border-radius: 4px;
-  font-size: 1rem;
-  width: 100%;
-}
-
-textarea {
-  resize: vertical;
-  min-height: 100px;
-}
-
-button {
-  background-color: #3498db;
-  color: white;
-  border: none;
-  padding: 0.75rem;
-  border-radius: 4px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  width: 100%;
-}
-
-button:hover {
-  background-color: #2980b9;
 }
 
 .status {
@@ -368,15 +434,34 @@ button:hover {
   margin-bottom: 10px;
 }
 
-/* Classes for the software tab */
-.file-management {
-  margin: 20px 5cm;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+.pdf-pub-button {
+  padding: 10px 15px;
+  background-color: red;
+  color: white;
+  border: black;
+  border-radius: 15px;
+  border-style: double;
+  cursor: pointer;
+  margin-bottom: 20px;
+  
+  /* Set button dimensions */
+  width: 200px; /* Set a specific width */
+  height: 50px; /* Set a specific height */
+
+  /* Center the button horizontally */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  
+  /* Optional: Text alignment */
+  text-align: center;
 }
-.file-item {
-  margin-bottom: 10px;
+
+.pdf-pub-button:hover {
+  background-color:gray;
+  border-color: red;
+  border-radius: 15px;
+
 }
 
 /* Blogs classes */
