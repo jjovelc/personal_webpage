@@ -328,6 +328,60 @@ body, html {
   transform: rotate(45deg);
 }
 
+/* Style for the banner container */
+.announcement-banner {
+  width: 100%; /* Full width banner */
+  background-color: rgb(246, 136, 239);
+  padding: 10px 0;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 2px solid black;
+}
+
+/* Style for the scrolling text */
+.announcement-text {
+  margin-top: 10px;
+  font-size: 24px;
+  display: inline-block;
+  white-space: nowrap; /* Prevent text from wrapping */
+  animation: scroll-left 30s linear infinite; /* Infinite scrolling */
+}
+
+/* Animation to scroll text from right to left */
+@keyframes scroll-left {
+  0% {
+      transform: translateX(100%);
+  }
+  100% {
+      transform: translateX(-100%);
+  }
+}
+
+.separator-container {
+  text-align: center;
+  position: relative;
+  margin: 20px 0; /* Adjusts spacing around the separator */
+}
+
+.year-text {
+  font-size: 28px;
+  background-color: white; /* Matches the background of your page to avoid overlapping */
+  padding: 0 100px;
+  position: relative;
+  top: 20px; /* Adjusts the position of the year above the separator */
+  z-index: 1;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+hr.rounded {
+ 
+  border-top: 3px solid darkgrey;
+  border-radius: 5px;
+  margin-top: 30px;
+  margin-bottom: 0;
+}
+
 /* Classes for the contact tab */
 .spacer {
   margin-bottom: 1em; /* Adjust the value as needed */
