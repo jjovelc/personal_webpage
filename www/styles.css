@@ -447,7 +447,20 @@ h3 {
   border-style: double;
   cursor: pointer;
   margin-bottom: 20px;
-  
+  width: 200px;
+  height: 50px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.pdf-pub-button:hover {
+  background-color: gray;
+  color: white;
+  border-color: red;
+  border-radius: 15px;
+}  
   /* Set button dimensions */
   width: 200px; /* Set a specific width */
   height: 50px; /* Set a specific height */

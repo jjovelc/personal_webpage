@@ -5,7 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="www/styles.css">
     <title>Publications</title>
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script>
+        function generatePDF() {
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF();
+
+    // Title of the PDF
+    doc.setFontSize(14);
+    doc.text('Juan Jovel - Publications', 105, 20, { align: 'center'
+        
+     });
+    
+    // Add page number variable
+    let pageNumber = 1;
+    
+    // Fetch the content of the publication list
+    const publicationContent = document.getElementById('publications-list').innerText;
+
+    // Set margins and text properties
+    const pageWidth = doc.internal.pageSize.width;
+    const pageHeight = doc.internal.pageSize.height;
+    const margin = 15;
+    const maxWidth = pageWidth - 2 * margin;
+
+    // Set font size for the body text
+    doc.setFontSize(12);
+
+    // Split the content into lines based on the page width
+    const lines = doc.splitTextToSize(publicationContent, maxWidth);
+
+    let y = 30; // Starting y position below the title
+
+    lines.forEach((line) => {
+        // Check if we need to add a new page
+        if (y > pageHeight - margin - 10) {
+            addFooter(doc, pageNumber, pageWidth, pageHeight, margin);
+            doc.addPage();
+            pageNumber++;
+            y = margin;  // Reset Y coordinate for the new page
+        }
+        doc.text(line, margin, y);
+        y += 7;  // Adjust Y position for next line
+    });
+
+    // Add footer to the last page
+    addFooter(doc, pageNumber, pageWidth, pageHeight, margin);
+
+    // Get the current date and format it as YYYY-MM-DD
+    const date = new Date();
+    const formattedDate = date.toISOString().split('T')[0];
+
+    // Save the PDF with the date in the filename
+    doc.save(`JuanJovel_publications_${formattedDate}.pdf`);
+}
+
+// Function to add page number and footer
+function addFooter(doc, pageNumber, pageWidth, pageHeight, margin) {
+    doc.setFontSize(10);
+    doc.text(`Page ${pageNumber}`, pageWidth / 2, pageHeight - margin, { align: 'center' });
+}
+    </script>
 </head>
 <body>
 
@@ -19,20 +81,24 @@
                 <a href="contact.html#contact">Contact</a>
             </div>
         </div>
+
     </div>
 
     <div class="main">
+
         <div class="content">
             <h2 style="color: rgb(16, 16, 125);">Publications</h2>
-            
-            <div class="publications" id="publication-list">
-                <h3 class="section-title">Peer reviewed papers</h3>
-            
-                <button class="pdf-pub-button" onclick="generatePDF()">Download PDF</button>
+
+            <button class="pdf-pub-button" onclick="generatePDF()">Download PDF</button>
+
+            <div class="publications" id="publications-list">
+                <h3 style="font-size: 24px; color: rgb(7, 111, 216); margin-left: 100px;">
+                    Peer reviewed papers
+                </h3>
                 
-                <p class="main-paragraph"> 
-                    <span>You can find the full list of publications on our 
-                    <a href="https://scholar.google.com/citations?user=YOUR_ID">Google Scholar</a> page or in 
+                <p class="main-paragraph">
+                    <span>You can find the full list of publications on our
+                    <a href="https://scholar.google.com/citations?user=YOUR_ID">Google Scholar</a> page or in
                     <a href="https://pubmed.ncbi.nlm.nih.gov/?term=Jovel+J&sort=pubdate">Pubmed</a>.</span><br><br>
                     
                     <span style="color: firebrick;">Average impact factor of publications up to publication 57 = 459.61/57: 8.1.</span><br><br>
@@ -127,26 +193,7 @@
         </div>
     </div>
 
-    <script>
-        function generatePDF() {
-            const { jsPDF } = window.jspdf;
-            const doc = new jsPDF();
     
-            // Fetch the content of the publication list
-            const publicationContent = document.getElementById('publications-list').innerText;
-    
-            // Add the content to the PDF
-            doc.text(publicationContent, 10, 10);
-    
-            // Get the current date and format it as YYYY-MM-DD
-            const date = new Date();
-            const formattedDate = date.toISOString().split('T')[0]; // YYYY-MM-DD format
-    
-            // Save the PDF with the date in the filename
-            doc.save(`JuanJovel_publications_${formattedDate}.pdf`);
-        }
-    </script>
-
     
 </body>
 </html>
