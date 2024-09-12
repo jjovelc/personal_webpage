@@ -62,10 +62,10 @@ body, html {
 }
 
 .main-paragraph {
-  text-align: left;
+  text-align: center;
   margin-top: 10px;
   font-size: 20px; /* Increase the font size here */
-  color: black; /* Change the color here */
+  color: rgb(220, 246, 70); /* Change the color here */
 }
 
 .contact-format {
@@ -387,18 +387,54 @@ hr.rounded {
   margin-bottom: 1em; /* Adjust the value as needed */
 }
 
-.container {
+.email-container {
+
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 2rem;
   width: 100%;
-  max-width: 500px;
-  margin: 20px auto;
+  max-width: 600px;
+  margin: 50px auto;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Adds spacing between form fields */
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%; /* Ensure the input and textarea take full width */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.contact-form textarea {
+  height: 200px; /* Ensure the textarea has a good height */
+  resize: vertical; /* Allow vertical resizing, if needed */
+}
+
+.contact-form button {
+  background-color: navy;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.contact-form button:hover {
+  background-color: #333;
 }
 
 h3 {
-  color: #F1C40F;
+  color: lightgray;
   margin: 0 0 20px 0;
   text-align: center;
 }

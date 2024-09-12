@@ -38,7 +38,8 @@
         </div>
     </div>
     <div class="main">
-        <h3 style="color: lightgray;margin: 0 5cm">University of Calgary</h3><br>
+        <p class="main-paragraph">University of Calgary<br></p>
+        
         <div class="content">
             
         <p class="contact-format">
@@ -52,7 +53,7 @@
             <a href="https://vet.ucvm.ca/bioinformatics/home" style="color: lightblue;">https://vet.ucvm.ca/bioinformatics/home</a>
         </p> <br><br>
             
-            <h3 style="color: lightgray;margin: 0 5cm">Dayhoff Technologies</h3><br>
+            <p class="main-paragraph">Dayhoff Technologies<br></p>
             <p class="contact-format">
                 Juan Jovel<br>
                 Bioinformatics lead<br>
@@ -64,17 +65,20 @@
 
             <p class="spacer"></p>
             <!-- Contact Form using Formspree -->
-                <div class="container">
-                    <h3 style="color: navy;">Send me a message</h3>
+                <div class="email-container" >
+                    <p class="main-paragraph" style="color: dodgerblue;">
+                        Send me a message<br>
+                    </p>
+                    
                     <form class="contact-form" action="https://formspree.io/f/mnnargqj" method="POST">
                         <label for="name">Name</label>
                         <input type="text" id="name" name="name" placeholder="Your name" required>
 
                         <label for="email">Email</label>
-                        <input type="email" id="email" name="email" placeholder="Your email" required>
+                        <input type="email" id="email" name="email" placeholder="Your email" required><br>
 
                         <label for="message">Message</label>
-                        <textarea id="message" name="message" placeholder="Write your message here..." style="height:200px" required></textarea>
+                        <textarea id="message" name="message" placeholder="Write your message here..." style="height:200px;" required></textarea>
 
                         <button type="submit">Send</button>
                     </form>
