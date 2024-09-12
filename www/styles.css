@@ -5,6 +5,13 @@ body, html {
   background-color: white; /* Change this to your desired background color */
 }
 
+.subtitle-yellow{
+  color: rgb(220, 246, 70);
+  text-align: center;
+  margin-top: 10px;
+  font-size: 20px; /* Increase the font size here */
+}
+
 .header {
   position: fixed;
   width: 100%;
@@ -55,17 +62,21 @@ body, html {
   color: white; /* Change the color here */
 }
 
-.content {
-  margin-top: 10px;
+.subtitle-blue {
+  font-size: 24px;
+  margin-top: 30px;
   padding: 20px;
-  color: #081f44; /* Change the color here */
+  color: #1d5ec5; /* Change the color here */
 }
 
 .main-paragraph {
-  text-align: center;
+  background-color: white;
+  margin-left: 100px;
+  width: 750px;
+  text-align:justify;
   margin-top: 10px;
-  font-size: 20px; /* Increase the font size here */
-  color: rgb(220, 246, 70); /* Change the color here */
+  font-size: 18px; /* Increase the font size here */
+  color: black; /* Change the color here */
 }
 
 .contact-format {

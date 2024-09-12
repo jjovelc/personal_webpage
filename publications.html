@@ -16,7 +16,7 @@
     // Title of the PDF
     doc.setFontSize(14);
     doc.text('Juan Jovel - Publications', 105, 20, { align: 'center'
-        
+
      });
     
     // Add page number variable
@@ -87,21 +87,22 @@ function addFooter(doc, pageNumber, pageWidth, pageHeight, margin) {
     <div class="main">
 
         <div class="content">
-            <h2 style="color: rgb(16, 16, 125);">Publications</h2>
-
+            <p  class="subtitle-blue"s>Publications</p>
+            
             <button class="pdf-pub-button" onclick="generatePDF()">Download PDF</button>
 
+            <p style="font-size: 22px; color:rgb(244, 4, 124); margin-left: 200px;">Peer reviewed papers</p>
+
             <div class="publications" id="publications-list">
-                <h3 style="font-size: 24px; color: rgb(7, 111, 216); margin-left: 100px;">
-                    Peer reviewed papers
-                </h3>
+
+                
                 
                 <p class="main-paragraph">
                     <span>You can find the full list of publications on our
                     <a href="https://scholar.google.com/citations?user=YOUR_ID">Google Scholar</a> page or in
                     <a href="https://pubmed.ncbi.nlm.nih.gov/?term=Jovel+J&sort=pubdate">Pubmed</a>.</span><br><br>
                     
-                    <span style="color: firebrick;">Average impact factor of publications up to publication 57 = 459.61/57: 8.1.</span><br><br>
+                    <span style="color: black">Average impact factor of publications up to publication 57 = 459.61/57: 8.1.</span><br><br>
 
                     57. Butters A, Jovel J, Gow S, Liljebjelke K, Waldner C, Checkley SL. 2024. PmrB Y358N, E123D amino acid substitutions are not associated with colistin resistance but with phylogeny in Escherichia coli. Microbiol Spectr. 20:e0053224. doi: 10.1128/spectrum.00532-24. Impact factor at the time of publication: 3.7.
                     <br><br>
@@ -165,8 +166,7 @@ function addFooter(doc, pageNumber, pageWidth, pageHeight, margin) {
                 </p>
             </div>
 
-
-            <h3 class="section-title">Books</h3>
+            <p style="font-size: 22px; color:rgb(244, 4, 124); margin-left: 200px;">Books</p>
             <div class="publications">
                 <p class="main-paragraph">
 
@@ -176,8 +176,8 @@ function addFooter(doc, pageNumber, pageWidth, pageHeight, margin) {
                     1. Sanfacon H, Zhang G, Chisholm J, Jafarpour B and Jovel J. 2006. Molecular biology of Tomato ringspot nepovirus, a pathogen of ornamentals, small fruits and fruit trees. In Texeira da Silva, J (Ed): Floriculture, Ornamental and Plant Biotechnology: Advances and topical issues (1st Ed). Volume III. Global Science Books, London, UK. pp. 540-546. <br><br>
                 </p>
             </div>
-     
-            <h3 class="section-title">Other publications</h3>
+            
+            <p style="font-size: 22px; color:rgb(244, 4, 124); margin-left: 200px;">Other publications</p>
             <div class="publications">
                 <p class="main-paragraph">
 
