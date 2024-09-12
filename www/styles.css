@@ -342,11 +342,11 @@ body, html {
 /* Style for the banner container */
 .announcement-banner {
   width: 100%; /* Full width banner */
-  background-color: rgb(246, 136, 239);
+  background-color: #fc7794;
   padding: 10px 0;
   position: relative;
   overflow: hidden;
-  border-bottom: 2px solid black;
+  border-bottom: 1px solid grey;
 }
 
 /* Style for the scrolling text */
