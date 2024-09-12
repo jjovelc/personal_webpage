@@ -66,21 +66,25 @@
             <p class="spacer"></p>
             <!-- Contact Form using Formspree -->
                 <div class="email-container" >
-                    <p class="main-paragraph" style="color: dodgerblue;">
-                        Send me a message<br>
-                    </p>
+                    <p class="main-paragraph" style="color: dodgerblue;">Send me a message<br></p>
                     
                     <form class="contact-form" action="https://formspree.io/f/mnnargqj" method="POST">
                         <label for="name">Name</label>
                         <input type="text" id="name" name="name" placeholder="Your name" required>
-
+                
                         <label for="email">Email</label>
-                        <input type="email" id="email" name="email" placeholder="Your email" required><br>
-
+                        <input type="email" id="email" name="email" placeholder="Your email" required>
+                
                         <label for="message">Message</label>
-                        <textarea id="message" name="message" placeholder="Write your message here..." style="height:200px;" required></textarea>
+                        <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
 
-                        <button type="submit">Send</button>
+                        <!-- Buttons inline -->
+                        <div class="button-group">
+                            <button type="submit">Send</button>
+                            <button type="reset" class="clear-button">Clear</button>
+                        </div>
+                
+                        
                     </form>
                 </div>
 

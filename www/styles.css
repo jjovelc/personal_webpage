@@ -404,6 +404,12 @@ hr.rounded {
   gap: 15px; /* Adds spacing between form fields */
 }
 
+.button-group {
+  display: flex;
+  justify-content: flex-start; /* Align buttons to the left */
+  gap: 10px; /* Space between the buttons */
+}
+
 .contact-form input[type="text"],
 .contact-form input[type="email"],
 .contact-form textarea {
@@ -420,13 +426,14 @@ hr.rounded {
 }
 
 .contact-form button {
-  background-color: navy;
-  color: white;
+  background-color: rgb(2, 110, 218);
+  color:white;
   padding: 10px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
+  width: 100px;
 }
 
 .contact-form button:hover {
@@ -461,6 +468,20 @@ h3 {
   height: 20px;
   animation: spin 1s linear infinite;
   margin: 10px auto;
+}
+
+/* Style for the smaller Clear button */
+.clear-button {
+  width: 100px;
+  background-color: gray;
+  padding: 10px;  /* Smaller padding */
+  font-size: 14px;  /* Smaller font size */
+  margin-left: 10px; /* Adds some spacing between the buttons */
+}
+
+.clear-button:hover {
+  background-color: gray;
+  color: white;
 }
 
 @keyframes spin {
