@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="www/styles.css">
     <title>Publications</title>
-    
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
 <body>
 
@@ -25,16 +24,19 @@
     <div class="main">
         <div class="content">
             <h2 style="color: rgb(16, 16, 125);">Publications</h2>
-            <div class="publications" id="publications-list">
-                <h3 style="
-                    font-size: 24px; 
-                    color: rgb(7, 111, 216);
-                    margin-left: 100px;">Peer reviewed papers</h3>
-                <button class="pdf-pub-button" onclick="generatePDF()">Download PDF</button>
             
+            <div class="publications" id="publication-list">
+                <h3 class="section-title">Peer reviewed papers</h3>
+            
+                <button class="pdf-pub-button" onclick="generatePDF()">Download PDF</button>
+                
                 <p class="main-paragraph"> 
-                    <span>You can find the full list of publications on our <a href="https://scholar.google.com/citations?user=YOUR_ID">Google Scholar</a> page or in <a href="https://pubmed.ncbi.nlm.nih.gov/?term=Jovel+J&sort=pubdate"> Pubmed</a></span> . <br><br>    
-                    <span style="color: purple;">Average impact factor of publications up to publication 57 = 459.61/57: 8.1. </span> <br><br><br>
+                    <span>You can find the full list of publications on our 
+                    <a href="https://scholar.google.com/citations?user=YOUR_ID">Google Scholar</a> page or in 
+                    <a href="https://pubmed.ncbi.nlm.nih.gov/?term=Jovel+J&sort=pubdate">Pubmed</a>.</span><br><br>
+                    
+                    <span style="color: firebrick;">Average impact factor of publications up to publication 57 = 459.61/57: 8.1.</span><br><br>
+
                     57. Butters A, Jovel J, Gow S, Liljebjelke K, Waldner C, Checkley SL. 2024. PmrB Y358N, E123D amino acid substitutions are not associated with colistin resistance but with phylogeny in Escherichia coli. Microbiol Spectr. 20:e0053224. doi: 10.1128/spectrum.00532-24. Impact factor at the time of publication: 3.7.
                     <br><br>
                     56.  Armstrong HK, Vincent N, Bernstein CH. et al. 2023. Gut microbiome composition and metabolic changes are correlated with sleep efficiency and disease phenotype in pediatric inflammatory bowel disease. J Sleep Med Disord 8(1): 1131. Impact factor at the time of publication: 4.3. <br><br>
@@ -97,10 +99,8 @@
                 </p>
             </div>
 
-            <h3 style="
-                font-size: 24px; 
-                color: rgb(7, 111, 216);
-                margin-left: 100px;">Books</h3>
+
+            <h3 class="section-title">Books</h3>
             <div class="publications">
                 <p class="main-paragraph">
 
@@ -110,12 +110,8 @@
                     1. Sanfacon H, Zhang G, Chisholm J, Jafarpour B and Jovel J. 2006. Molecular biology of Tomato ringspot nepovirus, a pathogen of ornamentals, small fruits and fruit trees. In Texeira da Silva, J (Ed): Floriculture, Ornamental and Plant Biotechnology: Advances and topical issues (1st Ed). Volume III. Global Science Books, London, UK. pp. 540-546. <br><br>
                 </p>
             </div>
-
-            
-            <h3 style="
-                font-size: 24px; 
-                color: rgb(7, 111, 216);
-                margin-left: 100px;">Other publications</h3>
+     
+            <h3 class="section-title">Other publications</h3>
             <div class="publications">
                 <p class="main-paragraph">
 
@@ -133,22 +129,22 @@
 
     <script>
         function generatePDF() {
-        const { jsPDF } = window.jspdf;
-        const doc = new jsPDF();
-
-        // Fetch the content of the publication list
-        const publicationContent = document.getElementById('publication-list').innerText;
-
-        // Add the content to the PDF
-        doc.text(publicationContent, 10, 10);
-
-        // Get the current date and format it as YYYY-MM-DD
-        const date = new Date();
-        const formattedDate = date.toISOString().split('T')[0]; // YYYY-MM-DD format
-
-        // Save the PDF with the date in the filename
-        doc.save(`JuanJovel_publications_${formattedDate}.pdf`);
-                
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+    
+            // Fetch the content of the publication list
+            const publicationContent = document.getElementById('publications-list').innerText;
+    
+            // Add the content to the PDF
+            doc.text(publicationContent, 10, 10);
+    
+            // Get the current date and format it as YYYY-MM-DD
+            const date = new Date();
+            const formattedDate = date.toISOString().split('T')[0]; // YYYY-MM-DD format
+    
+            // Save the PDF with the date in the filename
+            doc.save(`JuanJovel_publications_${formattedDate}.pdf`);
+        }
     </script>
 
     

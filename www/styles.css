@@ -251,13 +251,13 @@ body, html {
 }
 
 .grid-item {
-  background-color: #f0f0f0;
+  background-color: white;
   flex-direction: column;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1.2rem;
-  border: 1px solid #ccc;
+  border: 1px solid white;
 }
 
 .thumbnail img {
@@ -430,14 +430,18 @@ h3 {
   margin: 20px 5cm;
   color: grey;
 }
-.publication {
+.section-title {
   margin-bottom: 10px;
+  color: rgb(9, 56, 157);
+  text-align: center;
+  font-size: 24px;
 }
 
 .pdf-pub-button {
   padding: 10px 15px;
-  background-color: red;
-  color: white;
+  background-color: lightgray;
+  color: black;
+  font-size: 18px;
   border: black;
   border-radius: 15px;
   border-style: double;
@@ -459,6 +463,7 @@ h3 {
 
 .pdf-pub-button:hover {
   background-color:gray;
+  color: white;
   border-color: red;
   border-radius: 15px;
 
