@@ -747,6 +747,7 @@ ul li a:hover {
 
 .white-rectangle-scRNAseq {
   background-color: white;
+  overflow: auto;
   width: 90%;
   height: 100%;
   margin: 0 auto; 
@@ -863,6 +864,63 @@ ul li a:hover {
   margin-top: 20px; /* Adds space between the text and the button */
 }
 
+
 .register-button:hover {
   background-color: darkred; /* Darker red when hovered */
+}
+
+.quote-box-support {
+  margin-top: 20px;
+  margin-right: 20px;
+  float: right;
+  background-color: white;
+  padding: 10px;
+  flex: 1;
+  height: 200px;
+  max-width: 30%;
+  text-align: center;
+  position: relative;
+  border-color: gray;
+  transition: all 0.4s ease; /* Transition for hover effects */
+  border-radius: 15px;
+}
+
+.watch-video-button {
+  width: 110px;
+  height: 30px;
+  display: inline-block;
+  background-color:dodgerblue; /* Red background */
+  color: white; /* White text */
+  padding: 10px 20px; /* Padding around the text */
+  line-height: 1.5em; 
+  text-decoration: none; /* Remove underline from the link */
+  font-size: 20px; /* Font size */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  margin-top: 20px; /* Adds space between the text and the button */
+}
+
+
+.watch-video-button:hover {
+  background-color: navy; /* Darker red when hovered */
+}
+
+.download-slides-button {
+  width: 150px;
+  height: 30px;
+  display: inline-block;
+  background-color:dodgerblue; /* Red background */
+  color: white; /* White text */
+  padding: 10px 20px; /* Padding around the text */
+  line-height: 1.5em; 
+  text-decoration: none; /* Remove underline from the link */
+  font-size: 20px; /* Font size */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  margin-top: 20px; /* Adds space between the text and the button */
+}
+
+
+.download-slides-button:hover {
+  background-color: navy; /* Darker red when hovered */
 }
