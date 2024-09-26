@@ -853,7 +853,7 @@ ul li a:hover {
   width: 100px;
   height: 30px;
   display: inline-block;
-  background-color: #2B60DE; /* Red background */
+  background-color: red; /* Red background */
   color: white; /* White text */
   padding: 10px 20px; /* Padding around the text */
   line-height: 1.5em; 
@@ -865,7 +865,7 @@ ul li a:hover {
 }
 
 .register-button:hover {
-  background-color: navy; /* Darker red when hovered */
+  background-color: firebrick; /* Darker red when hovered */
 }
 
 #container {
