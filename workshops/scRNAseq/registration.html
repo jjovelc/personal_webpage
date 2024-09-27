@@ -1,7 +1,99 @@
+<!-- registration.html -->
 <!DOCTYPE html>
-<hhtml>
-  <head>
-    <title>Registration</title>
-  </head>
-  <body></body>
-</hhtml>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="www/styles.css">
+    <title>Registration Form</title>
+    <style>
+        /* Basic styling for the form */
+        form {
+            max-width: 600px;
+            margin: auto;
+        }
+        label, input, select, button {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        input[type="password"],
+        select,
+        textarea {
+            display: block;
+            width: 50%;          /* Set width to 50% (half the original width) */
+            height: 40px;        /* Set height to 40px */
+            margin-bottom: 10px;
+            margin-left: auto;   /* Center the input fields */
+            margin-right: auto;
+            box-sizing: border-box; 
+            font-size: 20px;   
+        }
+
+
+        .button-style{
+            margin-top: 10px;
+            background-color: rgb(59, 158, 239);
+            font-size: 18px;
+            text-align: center;
+            color: white;
+            height: 40px;
+            width: 175px;
+        }
+        .paragraph-format{
+          font-family: Arial, Helvetica, sans-serif;
+          font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="paragraph-format">
+      <p style="color: rgb(12, 12, 126); font-size: 24px; margin-left: 50px;">Course Registration</p>
+      <form action="submit_registration.php" method="post">
+          <!-- Hidden Fields with Hardcoded Values -->
+          <input type="hidden" id="year" name="year" value="2024">
+          <input type="hidden" id="month" name="month" value="October">
+          <input type="hidden" id="name_course" name="name_course" value="Unlock the power of scRNAseq data analysis">
+
+          <!-- Participant Name -->
+          <label for="name_participant">Your Name:</label>
+          <input type="text" id="name_participant" name="name_participant" required>
+
+          <!-- Participant Email -->
+          <div class="form-group">
+            <label for="email_participant">Your Email:</label>
+            <input type="email" id="email_participant" name="email_participant" required>
+          </div>
+
+          <!-- PI Name -->
+          <label for="name_PI">PI's Name:</label>
+          <input type="text" id="name_PI" name="name_PI" required>
+
+          <!-- PI Email -->
+          <div class="form-group">
+            <label for="email_PI">PIs Email:</label>
+            <input type="email" id="email_PI" name="email_PI" required>
+          </div>
+
+          <!-- Project Number -->
+          <label for="project_number">Project Number:</label>
+          <input type="text" id="project_number" name="project_number" required>
+
+          <!-- Fund -->
+          <label for="fund">Fund:</label>
+          <input type="text" id="fund" name="fund" required>
+
+          <!-- Department ID -->
+          <label for="dept_id">Department ID:</label>
+          <input type="text" id="dept_id" name="dept_id" required><br>
+
+          <!-- Buttons -->
+          
+          <button class="button-style" type="submit" name="register">Register</button>
+          <button class="button-style" type="button" onclick="window.location.href='scRNAseq.html'">Cancel</button>
+          
+      </form>
+    </div>
+</body>
+</html>
