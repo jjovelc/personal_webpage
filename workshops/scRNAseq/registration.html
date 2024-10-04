@@ -47,11 +47,49 @@
           font-size: 20px;
         }
     </style>
+
+    <script>
+      function validateForm() {
+          // Get form field values
+          const fund = document.getElementById('fund').value;
+          const deptId = document.getElementById('dept_id').value;
+          const projectNumber = document.getElementById('project_number').value;
+
+          // Regular expressions for validation
+          const fundPattern = /^\d{2}$/;
+          const deptIdPattern = /^\d{5}$/;
+          const projectPatternAlphaNum = /^[A-Za-z]{2}\d{6}$/;
+          const projectPatternNum = /^\d{8}$/;
+
+          // Validate Fund (2 numeric characters)
+          if (!fundPattern.test(fund)) {
+              alert('Please enter a valid Fund (2 numeric characters).');
+              return false;
+          }
+
+          // Validate Department ID (5 numeric characters)
+          if (!deptIdPattern.test(deptId)) {
+              alert('Please enter a valid Department ID (5 numeric characters).');
+              return false;
+          }
+
+          // Validate Project Number (2 alpha characters + 6 digits OR 8 digits)
+          if (!projectPatternAlphaNum.test(projectNumber) && !projectPatternNum.test(projectNumber)) {
+              alert('Please enter a valid Project Number (2 alpha characters followed by 6 digits OR 8 numeric characters).');
+              return false;
+          }
+
+          // If everything is valid, submit the form
+          return true;
+      }
+    </script>
+
+
 </head>
 <body>
     <div class="paragraph-format">
       <p style="color: rgb(12, 12, 126); font-size: 24px; margin-left: 50px;">Course Registration</p>
-      <form action="https://formspree.io/f/xwpegboa" method="POST">
+      <form action="https://formspree.io/f/xwpegboa" method="POST" onsubmit="return validateForm();">
           <!-- Hidden Fields with Hardcoded Values -->
           <input type="hidden" name="year" value="2024">
           <input type="hidden" name="month" value="October">
