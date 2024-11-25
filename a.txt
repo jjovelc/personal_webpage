@@ -1,9 +1,0 @@
-Fund:  
-- 2 numeric characters
-
-DeptID: 
-- 5 numeric characters
-
-Project: 
-- 2 alpha characters followed by 6 numeric characters  
-- 8 numeric characters
