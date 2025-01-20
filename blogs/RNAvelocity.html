@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RNA Velocity</title>
+</head>
+<body>
+    <h1 id="rna-velocity">RNA Velocity</h1>
+    <p>
+        RNA velocity is a computational framework that allows inference of the future state of individual cells in single-cell RNA-seq experiments.
+        While RNA-seq data provides a static snapshot of RNA transcription, it reveals little about dynamic processes that occur during development
+        or in response to stimuli. Addressing this challenge, La Manno and collaborators (2018) introduced RNA velocity, leveraging the observation
+        that nascent (unspliced) RNA exhibits different dynamics compared to mature (spliced) RNA. Based on the analysis of the ratio of spliced
+        and unspliced RNA, the direction of a cell state transition is predicted in the high-dimensional gene expression space, offering insights
+        into cellular trajectories.
+    </p>
+    <p>
+        At its core, RNA velocity models transcription activity using splicing kinetics equations, assuming steady state or dynamical models.
+        A simpler analogy is imagining a UMAP plot as a dynamic movie where cells move from one state to another over time. In this context,
+        RNA velocity predicts those transitions. However, RNA velocity does not measure transcription directly but instead leverages the comparison
+        of unspliced and spliced RNA to make inferences.
+    </p>
+    <p>
+        Unspliced molecules represent RNA that is being synthesized; the higher this proportion, the more active the transcription of particular
+        genes. The steady-state RNA (spliced) represents the pool of RNA already synthesized. Based on the first, the magnitude of the second
+        can be calculated, and transitions can be predicted accordingly. A useful analogy is motion in physics: the steady-state levels of RNA
+        correspond to a cell’s current position, while nascent (unspliced) RNA reflects its acceleration. With these two components, RNA velocity
+        calculates a cell’s future position (state) at time t + 1.
+    </p>
+    <p>
+        This method has multiple applications in diverse research areas, including:
+    </p>
+    <ul>
+        <li>Developmental biology: Stem-cell transitions into diverse cell types.</li>
+        <li>Cancer biology: Identifying cell types associated with more aggressive cancer.</li>
+        <li>Cellular reprogramming: Studying pluripotency or direct cell-type conversions.</li>
+        <li>Immune system dynamics: Unveiling immune cell dynamics in response to stimulation.</li>
+        <li>Gene regulatory networks: Identification of regulators of cell state transitions.</li>
+        <li>Disease progression and therapy: Unraveling cellular dynamics during therapy.</li>
+    </ul>
+
+    <h2 id="computational-pipeline">Computational Pipeline</h2>
+    <h3 id="quantification">Quantification</h3>
+    <p>
+        Data used in this tutorial corresponds to PBMCs from a healthy individual, described
+        <a href="https://cf.10xgenomics.com/samples/cell-exp/4.0.0/Parent_NGSC3_DI_PBMC/Parent_NGSC3_DI_PBMC_web_summary.html" target="_blank">here</a>.
+    </p>
+    <ol>
+        <li>Create a new mamba environment with the required software:</li>
+    </ol>
+    <pre>
+<code>
+mamba create -n RNAvel python=3.11 numpy=1.23 pandas=1.5 scanpy=1.9 pyroe salmon alevin-fry
+mamba activate RNAvel
+</code>
+    </pre>
+    <ol start="2">
+        <li>Download genome and GTF files:</li>
+    </ol>
+    <pre>
+<code>
+# Genome
+wget https://ftp.ensembl.org/pub/current_fasta/homo_sapiens/dna/Homo_sapiens.GRCh38.dna.toplevel.fa.gz 
+
+# GTF
+wget https://ftp.ensembl.org/pub/current_gtf/homo_sapiens/Homo_sapiens.GRCh38.113.chr_patch_hapl_scaff.gtf.gz
+</code>
+    </pre>
+    <ol start="3">
+        <li>Create a spliced reference genome:</li>
+    </ol>
+    <pre>
+<code>
+pyroe make-splici "$GENOME" "$GTF" 151 hs_GRCh38_113_splici_python --flank-trim-length 5 --filename-prefix splici
+</code>
+    </pre>
+    <p>
+        The above command will produce a folder named <code>hs_GRCh38_113_splici_python</code>, containing files like:
+    </p>
+    <ul>
+        <li><code>clean_gtf.gtf</code></li>
+        <li><code>gene_id_to_name.tsv</code></li>
+        <li><code>splici_fl146.fa</code></li>
+        <li><code>splici_fl146_t2g_3col.tsv</code></li>
+    </ul>
+
+    
+
+
+
+    <h3 id="references">References</h3>
+    <ol>
+        <li>La Manno, G., Soldatov, R., Zeisel, A., et al. RNA velocity of single cells. Nature, 560, 494–498 (2018). <a href="https://doi.org/10.1038/s41586-018-0414-6" target="_blank">DOI</a></li>
+        <li>Domínguez Conde C, Xu C, Jarvis LB., et al. Cross-tissue immune cell analysis reveals tissue-specific features in humans. Science. 2022. DOI: 10.1126/science.abl5197.</li>
+        <li>Xu C, Prete M, Webb S., et al. Automatic cell-type harmonization and integration across Human Cell Atlas datasets. Cell, 2023. DOI: 10.1016/j.cell.2023.11.026.</li>
+    </ol>
+</body>
+</html>

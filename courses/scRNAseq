@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Workshop Sign-Up</title>
+    <link rel="stylesheet" type="text/css" href="www/styles.css">
+</head>
+<body>
+    <div class="header">
+        <div class="nav">
+            <div class="links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="software.html">Software</a>
+                <a href="publications.html">Publications</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a> 
+                <a href="signup.html">Sign Up</a> <!-- Add link to sign-up page -->
+            </div>
+        </div>
+    </div>
+
+    <div class="main">
+        <h1>Sign Up for Our Workshop</h1>
+        <form action="https://formspree.io/f/your_form_id" method="POST">
+            <label for="name">Full Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">Email Address:</label><br>
+            <input type="email" id="email" name="_replyto" required><br><br>
+
+            <label for="course">Course/Workshop:</label><br>
+            <input type="text" id="course" name="course" value="Course Name" readonly><br><br>
+
+            <input type="submit" value="Sign Up">
+        </form>
+    </div>
+
+</body>
+</html>
