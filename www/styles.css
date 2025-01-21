@@ -1,27 +1,27 @@
 /* For mobile deployment enhancement */
 
-/* Reset box-sizing */
+/* Base reset and responsive viewport handling */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* Base styles */
+/* Root variables for consistent sizing */
 :root {
-  --primary-font-size: 16px;
-  --heading-scale: 1.5;
+  --header-height: 60px;
   --container-padding: 20px;
+  --primary-blue: #081f44;
+  --text-light: #ffffff;
 }
 
-html {
-  font-size: var(--primary-font-size);
-}
-
-body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+/* Base styles */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
   line-height: 1.6;
-  -webkit-text-size-adjust: 100%;
 }
 
 /* Container */
@@ -32,141 +32,163 @@ body {
   padding: 0 var(--container-padding);
 }
 
-/* Images */
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* Header and Navigation */
+/* Header styles */
 .header {
+  position: fixed;
   width: 100%;
-  padding: 15px var(--container-padding);
-  background-color: #fff;
-  position: sticky;
-  top: 0;
+  height: var(--header-height);
+  background-color: var(--primary-blue);
   z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.nav .links {
+.nav {
   display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 0 20px;
 }
 
-.nav .links a {
+/* Navigation links */
+.nav a {
+  color: var(--text-light);
   text-decoration: none;
-  padding: 8px 16px;
-  transition: all 0.3s ease;
+  padding: 8px 12px;
 }
 
-/* Content Sections */
-.top-image,
-.quote-box-illustrator1,
-.quote-box-support-illustrator {
+/* Banner styles */
+.banner {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  min-height: 50vh;
+  padding: 20px;
+  margin-top: var(--header-height);
+  display: flex;
+  align-items: center;
+}
+
+/* Main content */
+.main-paragraph {
   width: 100%;
-  margin-bottom: 30px;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 0 20px;
+  text-align: justify;
 }
 
-.main-paragraph,
-.bullet,
-.bullet-level2 {
-  max-width: 800px;
-  margin: 0 auto 20px;
+/* Responsive grid */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
 }
 
 /* Buttons */
-.register-button-illustrator,
-.download-content-button-illustrator {
-  width: 100%;
-  max-width: 300px;
-  margin: 15px auto;
-  padding: 12px 24px;
-  border-radius: 4px;
+.register-button,
+.watch-video-button,
+.content-button {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
   text-align: center;
+  transition: background-color 0.3s ease;
+  margin: 10px 0;
+  width: auto;
+  min-width: 120px;
 }
 
-/* Responsive Typography */
-h1 { font-size: calc(var(--primary-font-size) * 2.5); }
-h2 { font-size: calc(var(--primary-font-size) * 2); }
-h3 { font-size: calc(var(--primary-font-size) * 1.75); }
+/* Quote boxes */
+.quote-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
 
-/* Tablet Breakpoint */
-@media screen and (max-width: 768px) {
+.quote-box {
+  width: 100%;
+  padding: 20px;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Media Queries */
+@media screen and (min-width: 768px) {
+  .quote-container {
+    flex-direction: row;
+  }
+  
+  .quote-box {
+    flex: 1;
+  }
+  
+  .nav {
+    padding: 0 40px;
+  }
+}
+
+@media screen and (max-width: 767px) {
   :root {
-    --primary-font-size: 15px;
     --container-padding: 15px;
   }
 
-  .nav .links {
+  .header {
+    height: auto;
+  }
+
+  .nav {
     flex-direction: column;
-    gap: 10px;
+    padding: 10px;
   }
 
-  .nav .links a {
+  .nav a {
     display: block;
+    width: 100%;
     text-align: center;
+    padding: 12px;
   }
 
-  .main-paragraph,
-  .bullet,
-  .bullet-level2 {
+  .banner {
+    min-height: 40vh;
+  }
+
+  .main-paragraph {
     padding: 0 15px;
   }
 
-  .quote-box-illustrator1,
-  .quote-box-support-illustrator {
-    padding: 20px 15px;
+  .grid-container {
+    grid-template-columns: 1fr;
   }
 }
 
-/* Mobile Breakpoint */
+/* Small screens */
 @media screen and (max-width: 480px) {
-  :root {
-    --primary-font-size: 14px;
-    --container-padding: 10px;
-  }
-
-  .header {
-    padding: 10px var(--container-padding);
-  }
-
-  h1 { font-size: calc(var(--primary-font-size) * 2); }
-  h2 { font-size: calc(var(--primary-font-size) * 1.75); }
-  h3 { font-size: calc(var(--primary-font-size) * 1.5); }
-
-  .quote-box-illustrator1 p {
-    font-size: 1.2rem;
-  }
-
-  .register-button-illustrator,
-  .download-content-button-illustrator {
-    max-width: 250px;
-    padding: 10px 20px;
-  }
-}
-
-/* Print styles */
-@media print {
-  .nav,
-  .register-button-illustrator,
-  .download-content-button-illustrator {
-    display: none;
-  }
-
   body {
-    font-size: 12pt;
+    font-size: 14px;
   }
 
-  img {
-    max-width: 100% !important;
-    page-break-inside: avoid;
+  .banner {
+    min-height: 30vh;
+  }
+
+  .main-paragraph {
+    padding: 0 10px;
   }
 }
 
+/* For proper button scaling on mobile */
+@media (hover: none) {
+  .register-button,
+  .watch-video-button,
+  .content-button {
+    padding: 15px 20px; /* Larger touch target */
+  }
+}
 /* Ends mobile deploment enhacement code */
 
 body, html {
