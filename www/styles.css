@@ -1,3 +1,78 @@
+/* Mobile deploment configuration starts here */
+img {
+  max-width: 100%;
+  height: auto;
+}
+.header, .top-image, .quote-box-illustrator1, .quote-box-support-illustrator {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* Base styles for larger screens */
+body {
+  font-size: 16px;
+}
+
+@media screen and (max-width: 768px) {
+  /* For tablets and small devices */
+  .nav .links {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .main-paragraph, .bullet, .bullet-level2 {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .quote-box-illustrator1, .quote-box-support-illustrator {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* For phones */
+  body {
+    font-size: 14px;
+  }
+
+  .nav .links a {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .top-image img {
+    width: 100%;
+  }
+
+  .quote-box-illustrator1 p {
+    font-size: 18px;
+  }
+
+  .register-button-illustrator, .download-content-button-illustrator {
+    display: block;
+    margin: 10px auto;
+  }
+}
+
+body {
+  font-size: 1rem;
+}
+
+h1, h2, h3 {
+  font-size: 1.5rem;
+}
+
+.header .links {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; /* Allows links to stack on smaller screens */
+}
+
+/* Mobile deploment configuration up to here */
+
 body, html {
   height: 100%;
   margin: 0;
