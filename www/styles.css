@@ -429,7 +429,7 @@ body, html {
 
 .announcement-text {
   color: black;
-  font-size: 32px;
+  font-size: 28px;
   display: inline-block;
   white-space: nowrap;
   animation: scroll-left 30s linear infinite;
