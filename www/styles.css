@@ -1,77 +1,173 @@
-/* Mobile deploment configuration starts here */
+/* For mobile deployment enhancement */
+
+/* Reset box-sizing */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Base styles */
+:root {
+  --primary-font-size: 16px;
+  --heading-scale: 1.5;
+  --container-padding: 20px;
+}
+
+html {
+  font-size: var(--primary-font-size);
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  line-height: 1.6;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+/* Images */
 img {
   max-width: 100%;
   height: auto;
+  display: block;
 }
-.header, .top-image, .quote-box-illustrator1, .quote-box-support-illustrator {
+
+/* Header and Navigation */
+.header {
   width: 100%;
-  padding: 10px;
-  box-sizing: border-box;
+  padding: 15px var(--container-padding);
+  background-color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Base styles for larger screens */
-body {
-  font-size: 16px;
+.nav .links {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
+.nav .links a {
+  text-decoration: none;
+  padding: 8px 16px;
+  transition: all 0.3s ease;
+}
+
+/* Content Sections */
+.top-image,
+.quote-box-illustrator1,
+.quote-box-support-illustrator {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.main-paragraph,
+.bullet,
+.bullet-level2 {
+  max-width: 800px;
+  margin: 0 auto 20px;
+}
+
+/* Buttons */
+.register-button-illustrator,
+.download-content-button-illustrator {
+  width: 100%;
+  max-width: 300px;
+  margin: 15px auto;
+  padding: 12px 24px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+/* Responsive Typography */
+h1 { font-size: calc(var(--primary-font-size) * 2.5); }
+h2 { font-size: calc(var(--primary-font-size) * 2); }
+h3 { font-size: calc(var(--primary-font-size) * 1.75); }
+
+/* Tablet Breakpoint */
 @media screen and (max-width: 768px) {
-  /* For tablets and small devices */
+  :root {
+    --primary-font-size: 15px;
+    --container-padding: 15px;
+  }
+
   .nav .links {
-    display: flex;
     flex-direction: column;
-    text-align: center;
-  }
-
-  .main-paragraph, .bullet, .bullet-level2 {
-    margin-left: 10px;
-    margin-right: 10px;
-  }
-
-  .quote-box-illustrator1, .quote-box-support-illustrator {
-    text-align: center;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  /* For phones */
-  body {
-    font-size: 14px;
+    gap: 10px;
   }
 
   .nav .links a {
-    padding: 10px;
-    font-size: 14px;
+    display: block;
+    text-align: center;
   }
 
-  .top-image img {
-    width: 100%;
+  .main-paragraph,
+  .bullet,
+  .bullet-level2 {
+    padding: 0 15px;
   }
+
+  .quote-box-illustrator1,
+  .quote-box-support-illustrator {
+    padding: 20px 15px;
+  }
+}
+
+/* Mobile Breakpoint */
+@media screen and (max-width: 480px) {
+  :root {
+    --primary-font-size: 14px;
+    --container-padding: 10px;
+  }
+
+  .header {
+    padding: 10px var(--container-padding);
+  }
+
+  h1 { font-size: calc(var(--primary-font-size) * 2); }
+  h2 { font-size: calc(var(--primary-font-size) * 1.75); }
+  h3 { font-size: calc(var(--primary-font-size) * 1.5); }
 
   .quote-box-illustrator1 p {
-    font-size: 18px;
+    font-size: 1.2rem;
   }
 
-  .register-button-illustrator, .download-content-button-illustrator {
-    display: block;
-    margin: 10px auto;
+  .register-button-illustrator,
+  .download-content-button-illustrator {
+    max-width: 250px;
+    padding: 10px 20px;
   }
 }
 
-body {
-  font-size: 1rem;
+/* Print styles */
+@media print {
+  .nav,
+  .register-button-illustrator,
+  .download-content-button-illustrator {
+    display: none;
+  }
+
+  body {
+    font-size: 12pt;
+  }
+
+  img {
+    max-width: 100% !important;
+    page-break-inside: avoid;
+  }
 }
 
-h1, h2, h3 {
-  font-size: 1.5rem;
-}
-
-.header .links {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap; /* Allows links to stack on smaller screens */
-}
-
-/* Mobile deploment configuration up to here */
+/* Ends mobile deploment enhacement code */
 
 body, html {
   height: 100%;
