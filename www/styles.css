@@ -1,4 +1,70 @@
 /* For mobile deployment enhancement */
+/* Styles for screens smaller than 768px (typical mobile devices) */
+@media (max-width: 768px) {
+  .banner {
+    height: 300px; /* Adjust banner height for mobile */
+  }
+
+  .description {
+    font-size: 1.5em; /* Adjust font size for mobile */
+    margin: 50px 0 0 0;
+  }
+
+  .main-paragraph {
+    width: 90%; /* Make paragraph width responsive */
+    margin-left: 5%; /* Center the paragraph */
+    font-size: 16px; /* Adjust font size for mobile */
+  }
+
+  .contact-format {
+    margin: 0 1cm; /* Adjust margins for mobile */
+  }
+
+  .youtube-btn, .github-button, .ucvm_page-btn {
+    position: static; /* Stack buttons vertically */
+    margin: 10px auto; /* Center buttons */
+    display: block;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr; /* Single column layout for mobile */
+  }
+
+  .quote-box, .quote-box-illustrator {
+    max-width: 100%; /* Full width for mobile */
+    margin: 10px 0; /* Adjust margins */
+  }
+
+  .quote-container {
+    flex-direction: column; /* Stack boxes vertically */
+    align-items: center; /* Center boxes */
+  }
+
+  .quote-box-content, .quote-box-support {
+    position: static; /* Stack boxes vertically */
+    width: 90%; /* Full width for mobile */
+    margin: 10px auto; /* Center boxes */
+  }
+}
+
+/* Styles for screens smaller than 480px (very small mobile devices) */
+@media (max-width: 480px) {
+  .banner {
+    height: 200px; /* Further adjust banner height */
+  }
+
+  .description {
+    font-size: 1.2em; /* Further adjust font size */
+  }
+
+  .main-paragraph {
+    font-size: 14px; /* Further adjust font size */
+  }
+
+  .contact-format {
+    margin: 0 0.5cm; /* Further adjust margins */
+  }
+}
 
 /* Ends mobile deploment enhacement code */
 
