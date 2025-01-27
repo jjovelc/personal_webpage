@@ -1001,7 +1001,7 @@ ul li a:hover {
 .quote-box-support-illustrator {
   top: calc(10px + 420px + 10px); /* Specific positioning */
   padding: 10px;
-  height: 180px; /* Fixed height */
+  height: 220px; /* Fixed height */
 }
 
 /* Specific styles for content box */
