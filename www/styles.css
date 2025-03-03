@@ -1001,7 +1001,7 @@ ul li a:hover {
 .quote-box-support-illustrator {
   top: calc(10px + 420px + 10px); /* Specific positioning */
   padding: 10px;
-  height: 220px; /* Fixed height */
+  height: 240px; /* Fixed height */
 }
 
 /* Specific styles for content box */
@@ -1036,8 +1036,8 @@ ul li a:hover {
 }
 
 .register-button-illustrator {
-  width: 110px;
-  height: 30px;
+  width: 150px;
+  height: 60px;
   display: inline-block;
   background-color: #D2691E; /* Red background */
   color: white; /* White text */
@@ -1055,8 +1055,8 @@ ul li a:hover {
 }
 
 .download-content-button-illustrator {
-  width: 210px;
-  height: 30px;
+  width: 150px;
+  height: 60px;
   display: inline-block;
   background-color:#D2691E; /* Red background */
   color: white; /* White text */
