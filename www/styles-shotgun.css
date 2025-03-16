@@ -42,30 +42,43 @@
   height: auto;
 }
 
-/* Style for the banner container */
+/* Banner styles */
 .announcement-banner {
   width: 100%;
   padding: 10px 10px;
   position: relative;
   overflow: hidden;
-  border-bottom: 1px solid grey;
   display: flex;
-  align-items: center; /* This will vertically center the content */
+  align-items: center;
+  border-top: 2px solid lightgreen;
+  background-color: lightsalmon;
+  border-bottom: 2px solid lightgreen;
+  z-index: 10; /* Give it a higher z-index */
+  margin: 0; /* Reset margin */
+  box-sizing: border-box; /* Include padding in width calculation */
 }
 
 .announcement-text {
-  color: white;
+  color: black;
   font-size: 28px;
   display: inline-block;
   white-space: nowrap;
   animation: scroll-left 60s linear infinite;
-  margin: 0; /* Reset margin */
-  padding: 0; /* Reset padding */
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 /* Main content area */
-.main-paragraph {
-  
+.main-paragraph { 
   margin-left: 100px;
   width: 750px;
   text-align: justify;
@@ -78,7 +91,7 @@
 .quote-box-support-shotgun {
   position: absolute;
   right: 20px;
-  top: 400px;  /* Adjusted to be right after the top image */
+  top: 50px;  /* Adjusted to be right after the top image */
   background-color: white;
   padding: 20px;
   width: 30%;
@@ -101,7 +114,7 @@
 }
 
 .bullet{
-  color: white;
+  color: gray;
   
   margin-left: 125px;
   width: 750px;
@@ -116,7 +129,7 @@
   width: 750px;
   text-align:justify;
   font-size: 18px; /* Increase the font size here */
-  color: white; /* Change the color here */
+  color: gray; /* Change the color here */
 }
 
 /* Buttons */
@@ -138,7 +151,7 @@
 
 .register-button-shotgun:hover,
 .download-content-button-shotgun:hover {
-  background-color: darkkhaki;
+  background-color: grey;
 }
 
 .download-content-button-shotgun {
